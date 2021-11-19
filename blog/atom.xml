@@ -4,11 +4,11 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
  
-  <title>buralarda iken</title>
+  <title>mavi harita</title>
   <subtitle>atr0p’s blog</subtitle>
-  <link type="application/atom+xml" href="https://mertturunc.github.io/blog/atom.xml" rel="self" />
-  <link rel="alternate" type="text/html" href="https://mertturunc.github.io/" />
-  <id>https://mertturunc.github.io/</id>
+  <link type="application/atom+xml" href="maviharita.xyz/blog/atom.xml" rel="self" />
+  <link rel="alternate" type="text/html" href="maviharita.xyz/" />
+  <id>maviharita.xyz/</id>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <author>
     <name>Mert Turunç</name>
@@ -23,7 +23,7 @@ layout: nil
     {% if prefix == "http" %}
       {% assign absolute_url = post.url %}
     {% else %}
-      {% assign absolute_url = post.url | prepend: "https://mertturunc.github.io" %}
+      {% assign absolute_url = post.url | prepend: "maviharita.xyz" %}
     {% endif %}
     
     <entry>
@@ -47,7 +47,7 @@ layout: nil
         {% assign src_prefix = 'src="' | append: img_rel_prefix %}
         {% assign srcset_prefix = 'srcset="' | append: img_rel_prefix %}
         {% assign srcset_prefix_comma = ', ' | append: img_rel_prefix %}
-        {{ post.content | replace:'src="./',src_prefix | replace:'srcset="./',srcset_prefix | replace:', ./',srcset_prefix_comma | replace:'href="./',rel_prefix | replace:'src="/','src="https://mertturunc.github.io/rss/' | replace:'href="/','href="https://mertturunc.github.io/' }}
+        {{ post.content | replace:'src="./',src_prefix | replace:'srcset="./',srcset_prefix | replace:', ./',srcset_prefix_comma | replace:'href="./',rel_prefix | replace:'src="/','src="maviharita.xyz/rss/' | replace:'href="/','href="maviharita.xyz/' }}
         {% if post.embed %}
           <br />
           {{ post.embed }}
